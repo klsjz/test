@@ -14,7 +14,7 @@ int main()
 		cout<<A[i];
 	cout<<endl;
 	vector<int> a;
-	vector<int>::iterator new_end;
+	vector<int>::iterator new_end ,i;
 	for(int i=0;i<8;i++)
 		a.push_back(A[i]);
 	for (int i=0;i<8;)
@@ -25,8 +25,9 @@ int main()
 
 	a.erase(new_end,a.end());
 	cout<<a.size()<<endl;
-	for (int i=0;i<a.size();i++)
-		cout<<a[i];
+//	for (int i=0;i<a.size();i++)
+	for (i=a.begin();i!=a.end()-1;i++)
+		cout<<*i<<" ";
 	cout<<endl;
 	return 0;
 }

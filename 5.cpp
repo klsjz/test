@@ -15,32 +15,45 @@ A solution set is:
 #include<vector>
 #include<algorithm>
 using namespace std;
-/*
-vector<vector<int>> threeSum(vector<int>&num)
+
+vector< vector<int> > threeSum(vector<int>&num)
 {
-	vector<vector<int>>result;
-	if(vector.size()<3)return result;
+	vector< vector<int> > result;
+	if(num.size() < 3)return result;
 	sort(num.begin(),num.end());
 	const int target= 0;
-	vector<int>::iterator a b;
+	vector<int>::iterator a, b;
 	for(a=num.begin();a!=num.end()-3;a++)
 	{
 		for( b=a+1;b!=num.end()-2;b++)
 		{
 			int c=target-*a-*b;
-			if (num.find()!=num.begin())
+			if (find(b+1,num.end(),c)!=num.end())
 				result.push_back(vector<int>{*a,*b,c});
 		}
 	}
 	return result;
-}*/
+}
 int main()
 {
 	int list[6]={-1,0,1,2,-1,-4};
+
 	vector<int> num(list,list+6);
-	vector<int>::iterator i;
+	sort(num.begin(),num.end());
+	vector<int>::iterator i,j;
 	for (i=num.begin();i!=num.end();i++)
 		cout<<*i<<" ";
+	cout<<endl;
+	vector< vector<int> > result;
+	result=threeSum(num);
+	unique(result.begin(),result.end());
+	for(auto i=result.begin();i!=result.end();i++)
+	{
+		for(auto k=i->begin();k!=(*i).end();k++)
+			cout<<*k<<" ";
+		cout<<endl;
+	}
+	cout<<endl;		
 	return 0;
 }	
 
