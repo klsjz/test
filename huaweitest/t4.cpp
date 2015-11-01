@@ -1,6 +1,6 @@
 #include<iostream>
-using namespace std;
 #include<string>
+using namespace std;
 int main()
 {
 	//char* s1,s2,s3;

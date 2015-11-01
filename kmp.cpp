@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include<string.h>
 using namespace std;
 void get_next(string t,int *next)
 {
@@ -7,7 +8,7 @@ void get_next(string t,int *next)
 	int j=-1;
 	int n=t.length();
 	next[0]=-1;
-	while(i<n)
+	while(i<n-1)
 	{
 		if(t[j]==t[i]||j==-1)
 		{
@@ -50,6 +51,7 @@ int main()
 	s="abcdfababaaaba";
 	t="ababaaaba";
 	cout<<kmp(s,t)<<endl;
+	cout<<"strstr:"<<strstr(&s[0],&t[0])<<endl;
 	int next[9]={0};
 	get_next(t,next);
 	for(int i=0;i<9;i++)

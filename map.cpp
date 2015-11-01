@@ -1,20 +1,24 @@
 #include<iostream>
 #include<map>
 #include<set>
+#include<string>
 using namespace std;
 int main()
 {
-	map<int,bool>mymap;
+	map<char,int>mymap;
 	set<int>myset;
-	if(mymap[0])
-		cout<<"i see you"<<endl;
+	string A="tfecdgfgt";
+	int n=9;
+	for(int i=0;i<n;i++)
+           {
+		
+	     
+             if(mymap.find(A[i])!=mymap.end())
+                cout<< A[i]<<endl;
+            else
+            	mymap[A[i]]=1; 
+            }
+ 
 	
-	if(mymap[0])
-		cout<<"i see you"<<endl;
-	if(myset.find(0)!=myset.end())
-		cout<<"set"<<endl;
-	myset.insert(0);
-	if(myset.find(0)!=myset.end())
-		cout<<"set1"<<endl;
 	return 0;
 }
